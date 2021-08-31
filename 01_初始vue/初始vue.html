@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>初识vue</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+<!-- 
+    小结：1. root容器里的代码被称为【Vue模板】 
+          2. {{}}里时js表达式
+          3. 注意区分 js表达式 和 js代码（语句）
+            3.1 js表达式有值返回
+            3.2 js代码，比如if等逻辑判断语句
+-->
+
+    <!-- 容器 -->
+    <div id="root">
+        <h1>hello,{{name}}</h1>
+    </div>
+
+    <script type="text/javascript">
+        Vue.config.productionTip = false;  // 阻止vue在启动时生产提示
+
+        // vue实例
+        const x = new Vue({
+            el:'#root',  // 制定关联容器,通常为css选择器字符串
+            data:{
+                name:'尚硅谷1'
+            }
+        })
+    </script>
+</body>
+
+</html>
